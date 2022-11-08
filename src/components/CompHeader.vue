@@ -11,15 +11,15 @@
             <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
             </button>
             <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
-            <ul class="flex flex-col mt-4 bg-gray-50 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent">
+            <ul class="flex flex-col mt-4 bg-gray-50 rounded-lg md:flex-row md:space-x-12 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent">
                 <li>
-                <a href="#footeradele" class="block py-2 pr-4 pl-3 text-white/70 text-base font-thin rounded hover:bg-grey-100 md:hover:bg-transparent md:border-0 md:hover:text-fuchsia-300 md:p-0">CONCIERTOS</a>
+                    <a href="#conciertos" class="block py-2 pr-4 pl-3 text-white/70 text-base font-thin rounded hover:bg-grey-100 md:hover:bg-transparent md:border-0 md:hover:text-fuchsia-300 md:p-0">CONCIERTOS</a>
                 </li>
                 <li>
-                <a href="#adelefooter" class="block py-2 pr-4 pl-3 text-white/70 text-base font-thin rounded hover:bg-grey-100 md:hover:bg-transparent md:border-0 md:hover:text-fuchsia-300 md:p-0">ÁLBUMS</a>
+                    <a href="#albums" class="block py-2 pr-4 pl-3 text-white/70 text-base font-thin rounded hover:bg-grey-100 md:hover:bg-transparent md:border-0 md:hover:text-fuchsia-300 md:p-0">ÁLBUMS</a>
                 </li>
                 <li>
-                <a href="#" class="block py-2 pr-4 pl-3 text-white/70 text-base font-thin rounded hover:bg-grey-100 md:hover:bg-transparent md:border-0 md:hover:text-fuchsia-300 md:p-0">ABOUT</a>
+                    <a href="#aboutadele" class="block py-2 pr-4 pl-3 text-white/70 text-base font-thin rounded hover:bg-grey-100 md:hover:bg-transparent md:border-0 md:hover:text-fuchsia-300 md:p-0">ABOUT</a>
                 </li>
             </ul>
             </div>
