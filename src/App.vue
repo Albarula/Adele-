@@ -3,7 +3,7 @@
   <CompHeader></CompHeader>
   <HelloWorld></HelloWorld>
   <CompFooter></CompFooter>
-  
+  <p>Hello Eugenia1</p>
 </template>
 
 <script>
