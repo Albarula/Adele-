@@ -1,6 +1,7 @@
 <template>
   <CompHeader></CompHeader>
   <playList></playList>
+  <ConciertosView />
   <AlbumsComps></AlbumsComps>
   <AboutAdele></AboutAdele>
   <CompImgfooter></CompImgfooter>
@@ -15,6 +16,7 @@ import CompImgfooter from './components/CompImgfooter.vue';
 import playList from "./components/playlist/playlist.vue";
 import AboutAdele from "./components/AboutView.vue";
 import AlbumsComps from "./components/albums.vue";
+import ConciertosView from './components/ConciertosView.vue';
 
 export default {
   name: "App",
@@ -24,7 +26,8 @@ export default {
     playList,
     AboutAdele,
     AlbumsComps,
-    CompImgfooter
+    CompImgfooter,
+    ConciertosView
   }
 }
 
