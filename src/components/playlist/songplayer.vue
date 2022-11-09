@@ -1,43 +1,46 @@
 <template>
   <div class="text-white">
+    <div>
+      <button @click="showList()" class="underline">ShowList</button>
+    </div>
     <!--    song information  -->
-    <div id="info-display">
+    <div id="info-display" class="flex m-8">
       <img
         id="imagen-album"
-        class="object-cover rounded ml-5"
+        class="object-cover h-48 rounded"
         v-bind:src="song.src"
       />
       <div id="info-songs">
-        <h3 class="text-4xl font-serif text-left">{{ song.artistName }}</h3>
-        <p>{{ song.name }}</p>
-        <p>{{ song.year }}</p>
-      </div>
-    </div>
-    <!-- music display  -->
-    <div id="music-display" class="grid grid-cols-3">
-      <div v-on:click="previous()" class="flex items-cente justify-center">
-        <button><img class="iconsP" src="./icons/previous.png" /></button>
-      </div>
-      <div class="flex items-cente justify-center">
-        <button v-on:click.prevent="playsong()">
-          <audio
-            controls
-            v-bind:src="song.music"
-            autoplay
-            ref="audioPlayer"
-          ></audio>
-        </button>
-      </div>
-      <div class="flex items-cente justify-center">
-        <button v-on:click="next()">
-          <img class="iconsN" src="./icons/next.png" />
-        </button>
+        <h3 class="text-5xl font-serif text-left pl-6 px-5">
+          {{ song.artistName }}
+        </h3>
+        <p class="pl-6">{{ song.name }}</p>
+        <p class="pl-6">{{ song.year }}</p>
+
+        <!-- music display  -->
+        <div id="music-display" class="flex items-center p-5">
+          <div v-on:click="previous()" class="justify-center p-5">
+            <button><img class="h-3" src="./icons/previous.png" /></button>
+          </div>
+          <div class="flex justify-center p-5">
+            <button v-on:click.prevent="playsong()">
+              <audio
+                controls
+                v-bind:src="song.music"
+                autoplay
+                ref="audioPlayer"
+              ></audio>
+            </button>
+          </div>
+          <div class="flex items-center justify-center p-5">
+            <button v-on:click="next()">
+              <img class="h-3" src="./icons/next.png" />
+            </button>
+          </div>
+        </div>
       </div>
     </div>
     <!-- showme the list  -->
-    <div>
-      <button @click="showList()">ShowList</button>
-    </div>
   </div>
 </template>
 
@@ -84,47 +87,6 @@ export default {
 </script>
 
 <style scoped>
-button {
-  color: white;
-}
-h3 {
-  font-size: 27px;
-}
-#imagen-album {
-  width: 100%;
-  border-radius: 10px;
-  margin-top: 20px;
-}
-#music-display {
-  display: grid;
-  grid-template-columns: repeat(3, 4fr);
-  grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
-  margin-block: auto;
-}
-#info-display {
-  display: grid;
-  grid-template-columns: repeat(6, 2fr);
-  grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
-  align-items: center;
-  margin: 20px 0px 10px 50px;
-}
-#info-songs {
-  grid-column: 2 /6;
-  margin: 110px 50px 10px 50px;
-  grid-auto-rows: minmax(100px, auto);
-}
-.iconsP {
-  width: 7%;
-  margin-left: 220px;
-  align-items: center;
-}
-.iconsN {
-  width: 7%;
-  margin-right: 220px;
-  align-items: center;
-}
 audio {
   filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(12%);
   width: 600px;

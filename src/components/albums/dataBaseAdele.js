@@ -6,7 +6,7 @@ export default [
     year: 2021,
     src: `https://m.media-amazon.com/images/I/71-llhQmneL._SL1500_.jpg`,
     description:
-      "30 fue descrito como un álbum de pop, jazz y soul centrado en temas románticos pero melancólicos de dolor, aceptación y esperanza. Asimismo, se lo ha descrito como el trabajo más creativo de Adele desde un punto de vista sonoro, ampliando sus trabajos anteriores al incorporar elementos dance-pop y góspel. El pianista de jazz estadounidense Erroll Garner figura en la pista «All Night Parking» como artista invitado, marcando la primera vez que un artista aparece en un álbum estándar de Adele. Tras su publicación, 30 recibió aclamación generalizada por parte de los críticos musicales, quienes elogiaron su instrumentación cinematográfica, la interpretación vocal de Adele y sus letras introspectivas. El álbum logró aparecer en listas de los mejores álbumes de fin de año de 2021 de varias publicaciones.",
+      "30 fue descrito como un álbum de pop, jazz y soul centrado en temas románticos pero melancólicos de dolor, aceptación y esperanza. Asimismo, se lo ha descrito como el trabajo más creativo de Adele desde un punto de vista sonoro, ampliando sus trabajos anteriores al incorporar elementos dance-pop y góspel. 30 recibió aclamación generalizada por parte de los críticos musicales, quienes elogiaron su instrumentación cinematográfica, la interpretación vocal y sus letras introspectivas. El álbum logró aparecer en listas de los mejores álbumes en 2021.",
   },
   {
     id: 2,
@@ -33,7 +33,7 @@ export default [
     year: 2008,
     src: `https://m.media-amazon.com/images/I/81uldLioVvL._SL1500_.jpg`,
     description:
-      "19 es el primer álbum de estudio de la cantautora británica Adele. Fue publicado el 28 de enero de 2008, la semana en que el sencillo principal, «Chasing Pavements», fuera lanzado en formato físico. En su primera semana, el álbum debutó en el primer lugar de las listas en Reino Unido.El álbum incluye una versión de la canción de Bob Dylan «Make You Feel My Love». Este álbum le hizo valer a Adele dos galardones en la 51.ª entrega de los Premios Grammy como mejor artista nuevo y mejor interpretación vocal pop femenina por «Chasing Pavements». Se estima que el álbum ha vendido 10 millones de copias",
+      "19 es el primer álbum de estudio de la cantautora británica Adele. Fue publicado el 28 de enero de 2008, la semana en que el sencillo principal, «Chasing Pavements», fuera lanzado en formato físico. En su primera semana, el álbum debutó en el primer lugar de las listas en Reino Unido.El álbum incluye una versión de la canción de Bob Dylan «Make You Feel My Love». Este álbum le hizo valer a Adele dos galardones en la 51.ª entrega de los Premios Grammy como mejor artista nuevo y mejor interpretación vocal pop femenina por «Chasing Pavements».",
   },
   {
     id: 5,
