@@ -1,22 +1,24 @@
 <template>
-  <div v-if="!playVisibity">
+  <div v-if="!playVisibity" class="flex justify-center m-8 gap-4">
     <div
       id="song"
       v-for="(song, songIndex) in list"
       v-bind:key="song.id"
       v-on:click="playSong(songIndex)"
-      class="flex flex-row justify-between mb-4 cursor-pointer"
+      class="justify-between mb-4 cursor-pointer"
     >
       <div>
         <img
           id="songImage"
-          class="w-18 h-auto rounded-lg"
+          class="object-cover h-48 rounded-lg"
           v-bind:src="song.src"
         />
-      </div>
-      <div class="song-text">
-        <h3>{{ song.name }}</h3>
-        <p>{{ song.albumName }} - ({{ song.year }})</p>
+        <div class="text-white">
+          <h3 class="text-xl font-serif">{{ song.name }}</h3>
+          <p>
+            <b>{{ song.albumName }} </b> -({{ song.year }})
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -115,27 +117,7 @@ export default {
 </script>
 
 <style>
-h3 {
-  color: rgb(226 232 240);
-}
-p {
-  color: rgb(226 232 240);
-  font-weight: 200;
-}
-#songImage {
-  width: 30%;
-  border-radius: 10px;
-  margin: 5px;
-}
-#song {
-  display: grid;
-  grid-template-columns: repeat(3, 2fr);
-  grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
-}
-.song-text {
-  grid-column: 2 /3;
-  margin-left: 10px;
-  margin-top: 20px;
+img {
+  height: 20%;
 }
 </style>

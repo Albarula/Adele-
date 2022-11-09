@@ -1,7 +1,7 @@
 <template>
-  <div id="playlist" class="bg-zinc-900 p-0">
+  <div id="playlist" class="bg-zinc-900 p-5">
     <div class="m-8 p-8">
-      <h2 class="font-serif text-2xl text-white">Escucha nuestro Top 5</h2>
+      <h2 class="font-serif text-5xl text-white pb-4">Escucha nuestro Top 5</h2>
       <SongList> </SongList>
     </div>
   </div>
