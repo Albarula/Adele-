@@ -1,6 +1,6 @@
 <template>
     <footer id="footeradele" class="bg-black">
-        <h3 class="flex justify-center font-light text-white text-2xl pt-12 pb-4">FOLLOW ADELE</h3>
+        <h3 class="flex justify-center font-light text-white text-xl pt-8 pb-4">FOLLOW ADELE</h3>
         <div id="icons" class="flex justify-center items-center space-x-6 pb-20">
             <a href="https://www.facebook.com/adele/" target="_blank">
                 <img id="iconfacebook" class="h-10" alt="facebook" src="../assets/Facebook.png">
@@ -21,10 +21,16 @@
 
         <h4 class="flex justify-center text-sm font-thin text-fuchsia-400 pb-4">@2022 SONY MUSIC ENTERTAINMENT</h4>
 
-        <div class="flex justify-center text-xs font-thin text-white space-x-6 pb-6">
-            <h4>TERMS AND CONDITIONS</h4>
-            <h4>PRIVACY POLICY</h4>
-            <h4>HOW WE USE YOUR DATA</h4>
+        <div class="flex justify-center text-xs font-thin text-white space-x-4 pb-6">
+            <a href="#" target="_blank">
+                <h4>TERMS AND CONDITIONS</h4>
+            </a>
+            <a href="#" target="_blank">
+                <h4>PRIVACY POLICY</h4>
+            </a>
+            <a href="#" target="_blank">
+                <h4>HOW WE USE YOUR DATA</h4>
+            </a>
         </div>
 
     </footer>
