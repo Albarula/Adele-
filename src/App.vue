@@ -1,11 +1,11 @@
 <template>
-  <CompHeader></CompHeader>
-  <playList></playList>
-  <ConciertosView />
-  <AlbumsComps></AlbumsComps>
-  <AboutAdele></AboutAdele>
-  <CompImgfooter></CompImgfooter>
-  <CompFooter></CompFooter>
+      <CompHeader></CompHeader>
+      <playList></playList>
+      <ConciertosView />
+      <AlbumsComps></AlbumsComps>
+      <AboutAdele></AboutAdele>
+      <CompImgfooter></CompImgfooter>
+      <CompFooter></CompFooter>
 </template>
 
 <script>
@@ -32,3 +32,4 @@ export default {
 }
 
 </script>
+

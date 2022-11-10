@@ -1,11 +1,11 @@
 <template>
-    <div class="grid grid-cols-3">
+    <div id="concertscomp" class="grid grid-cols-3">
         <!-- Photo -->
         <div class="col-span-1">
             <img class="w-full" src="../assets/adeleconc.png" alt="">
         </div>
         <!-- Conciertos -->
-        <div class="col-span-2 text-center bg-slate-50">
+        <div class="col-span-2 text-center bg-white">
             <h1 class="text-4xl font-serif uppercase py-10">Conciertos</h1>
             <button type="submit"
                     class="h-10 w-1/4 border-2 border-gray-600 rounded-lg"

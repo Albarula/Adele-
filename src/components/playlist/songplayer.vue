@@ -38,12 +38,7 @@
               </button>
             </div>
           </div>
-          <div class="md:hidden sm:flex">
-            <div v-on:click="previous()" class="p-5">
-              <button><img class="h-3" src="./icons/previous.png" /></button>
-            </div>
-            <button v-on:click.prevent="playsong()" class="w-3/4 md:w-auto">
-              <audio controls v-bind:src="song.music" ref="audioPlayer"></audio>
+
             </button>
             <div class="flex items-center justify-center p-5">
               <button v-on:click="next()">
@@ -99,3 +94,4 @@ export default {
   },
 };
 </script>
+
