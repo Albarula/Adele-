@@ -24,12 +24,12 @@
           </div>
           <div class="flex justify-center p-5">
             <button v-on:click.prevent="playsong()">
-              <audio
+             <!--  <audio
                 controls
                 v-bind:src="song.music"
                 autoplay
                 ref="audioPlayer"
-              ></audio>
+              ></audio> -->
             </button>
           </div>
           <div class="flex items-center justify-center p-5">
@@ -86,9 +86,9 @@ export default {
 };
 </script>
 
-<style scoped>
+<!-- <style scoped>
 audio {
   filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(12%);
   width: 600px;
 }
-</style>
+</style> -->

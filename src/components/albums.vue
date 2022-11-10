@@ -1,5 +1,5 @@
 <template>
-  <div class="py-12">
+  <div id="albumscomp" class="py-12">
     <h1 class="text-4xl font-serif text-center py-4">ÁLBUMS</h1>
     <div class="py-6">
       <div class="flex justify-center m-8 gap-4">

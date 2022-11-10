@@ -1,6 +1,6 @@
 <template>
 
-<header id="headele" class="bg-[url('../assets/2ADELE.png')] sm:h-full lg:h-screen bg-cover bg-no-repeat">
+<header id="headele" class="lg:bg-[url('../assets/2ADELE.png')] bg-black lg:h-screen bg-cover bg-no-repeat">
     <nav class="p-3">
         <div class="container flex flex-wrap justify-between items-center mx-auto mt-2.5">
             <a href="headele" class="flex items-center">
@@ -13,10 +13,10 @@
             <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
             <ul class="flex flex-col mt-4 bg-gray-50 rounded-lg md:flex-row md:space-x-12 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent">
                 <li>
-                    <a href="#conciertos" class="block py-2 pr-4 pl-3 text-white/70 text-base font-thin rounded hover:bg-grey-100 md:hover:bg-transparent md:border-0 md:hover:text-fuchsia-300 md:p-0">CONCIERTOS</a>
+                    <a href="#concertscomp" class="block py-2 pr-4 pl-3 text-white/70 text-base font-thin rounded hover:bg-grey-100 md:hover:bg-transparent md:border-0 md:hover:text-fuchsia-300 md:p-0">CONCIERTOS</a>
                 </li>
                 <li>
-                    <a href="#albums" class="block py-2 pr-4 pl-3 text-white/70 text-base font-thin rounded hover:bg-grey-100 md:hover:bg-transparent md:border-0 md:hover:text-fuchsia-300 md:p-0">ÁLBUMS</a>
+                    <a href="#albumscomp" class="block py-2 pr-4 pl-3 text-white/70 text-base font-thin rounded hover:bg-grey-100 md:hover:bg-transparent md:border-0 md:hover:text-fuchsia-300 md:p-0">ÁLBUMS</a>
                 </li>
                 <li>
                     <a href="#aboutadele" class="block py-2 pr-4 pl-3 text-white/70 text-base font-thin rounded hover:bg-grey-100 md:hover:bg-transparent md:border-0 md:hover:text-fuchsia-300 md:p-0">ABOUT</a>
