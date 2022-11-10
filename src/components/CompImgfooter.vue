@@ -1,5 +1,4 @@
 <template>
-
     <div id="adelefooter" class="bg-[url('../assets/adelefooter.png')] sm:h-96 md:h-max lg:h-max bg-cover bg-no-repeat" src="../assets/adelefooter.png">
       <div class="md:col-span-4 pt-80 pb-16 ml-24 md:mb-0">
         
@@ -13,7 +12,6 @@
         </div>
       </div>
     </div>
-
 </template>
 
 <script>
@@ -34,4 +32,3 @@ export default {
   },
 };
 </script>
-

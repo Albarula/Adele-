@@ -2,10 +2,13 @@
   <div id="albumscomp" class="py-12">
     <h1 class="text-4xl font-serif text-center py-4">ÁLBUMS</h1>
     <div class="py-6">
-      <div class="flex justify-center m-8 gap-4">
+      <div class="flex justify-center m-4 gap-2">
         <div v-for="album in albums" :key="album.id" class="mx-6 mb-20">
           <div>
-            <button @click="showDetails(album.id)" class="mb-2">
+            <button
+              @click="showDetails(album.id)"
+              class="bg-white rounded-lg p-2 hover:bg-gray-100 hover:drop-shadow-md"
+            >
               <div>
                 <div>
                   <img
@@ -26,7 +29,7 @@
             <div
               v-if="idAlbumToShow === album.id"
               :key="album.id"
-              class="absolute fixed left-1/2 -translate-x-1/2 bg-white p-2"
+              class="absolute w-3/4 left-1/2 -translate-x-1/2 bg-white m-2 p-5"
             >
               <p class="text-slate-900">{{ album.description }}</p>
             </div>
