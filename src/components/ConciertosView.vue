@@ -1,25 +1,25 @@
 <template>
-    <div id="concertscomp" class="grid grid-cols-3">
+    <div id="concertscomp" class="grid md:grid-cols-2 lg:grid-cols-3">
         <!-- Photo -->
-        <div class="col-span-1">
-            <img class="w-full" src="../assets/adeleconc.png" alt="">
+        <div class="md:grid md:grid-cols-2 md:col-span-1 lg:grid-cols-3 lg:col-span-1 md:bg-yellow-200 lg:bg-gray-900">
+            <img class="w-full md:col-span-3" src="../assets/adeleconc.png" alt="">
         </div>
         <!-- Conciertos -->
-        <div class="col-span-2 text-center bg-white">
-            <h1 class="text-4xl font-serif uppercase py-10">Conciertos</h1>
+        <div class="md:grid-cols-2 md:col-span-1 lg:grid-cols-3 lg:col-span-2 text-center
+                    md:bg-yellow-500 lg:bg-white">
+            <h1 class="text-2xl md:text-3xl lg:text-4xl font-serif uppercase py-3 md:py-5 xl:py-10">Conciertos</h1>
             <button type="submit"
-                    class="h-10 w-1/4 border-2 border-gray-600 rounded-lg"
+                    class="h-10 w-1/4 text-gray-900 bg-white border border-gray-300
+                             focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-full text-sm px-5 py-2.5 mr-2 mb-2 2xl:my-10 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
                     v-on:click="getShows(0)">find
             </button>
             <!-- Lista de Conciertos -->
-            <div v-if="eventos">
-                <h3 class="text-gray-800 text-lg ">encontramos <span class="text-yellow-600 font-semibold  ">{{ eventos.page.totalElements }}
-                 </span> eventos, <span>({{ totalPages() }} paginas x {{ elementsPerPage }} )</span>
-                 estamos a {{ currentPage+1 }}
-                </h3>              
-                <ul class="">                                          
+            <div v-if="eventos"
+                 class="w-10/12 lg:w-2/3 xl:w-1/2 ml-auto mr-auto">
+                <!-- <h3 class="text-gray-800 text-lg ">encontramos <span class="text-yellow-600 font-semibold  ">{{ eventos.page.totalElements }}</span> eventos, <span>({{ totalPages() }} paginas x {{ elementsPerPage }} )</span>estamos a {{ currentPage+1 }}</h3>    -->
+                <ul>                                          
                     <li v-for:="events in eventos._embedded.events" :key="events"        
-                         class="md:w-1/2 lg:w-1/3 ml-2 mr-2 md:ml-auto md:mr-auto text-left shadow-sm md:shadow-md my-2 hover:bg-slate-200"
+                         class="text-left shadow-sm md:shadow-md my-2 hover:bg-slate-200"
                          @click="showAttraction">
                         {{events.name}} <br>
                         {{events.dates.start.localDate}} <br>
@@ -28,7 +28,8 @@
                         {{events._embedded.venues[0].country.countryCode}}
                     </li>
                 </ul>
-                <nav class="bg-slate-200 md:w-1/2 lg:w-1/3 h-12 ml-auto mr-auto">
+
+                <nav class="bg-slate-200 h-12 ml-auto mr-auto rounded-md">
                     <ul class="h-12 m-2 flex flex-row items-center justify-between">
                         <li v-on:click.prevent="prevClick()">
                             <a class="py-2 px-3 ml-0 bg-white hover:bg-slate-300 border rounded-l-md border-gray-300" href="#">
@@ -67,7 +68,7 @@ export default {
             error:'',
             key: 'o5gbvSYDrZAEYhCXE11sLyK8G0t5e4Qs',
             showAttractionModal: false,
-            elementsPerPage: 8,
+            elementsPerPage: 6,
             currentPage:0
         }
     },
