@@ -22,7 +22,6 @@
             <div v-on:click="previous()" class="p-5">
               <button><img class="h-3" src="./icons/previous.png" /></button>
             </div>
-
             <div class="md:flex flex-row p-5">
               <button v-on:click.prevent="playsong()" class="w-3/4 md:w-auto">
                 <audio
@@ -38,19 +37,16 @@
               </button>
             </div>
           </div>
-
+          <!--    <div class="flex items-center justify-center p-5">
+            <button v-on:click="next()">
+              <img class="h-3" src="./icons/next.png" />
             </button>
-            <div class="flex items-center justify-center p-5">
-              <button v-on:click="next()">
-                <img class="h-3" src="./icons/next.png" />
-              </button>
-            </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
-    <!-- showme the list  -->
   </div>
+  <!-- showme the list  -->
 </template>
 
 <script>
