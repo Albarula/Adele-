@@ -21,7 +21,7 @@
 
         <h4 class="flex justify-center text-sm font-thin text-fuchsia-400 pb-4">@2022 SONY MUSIC ENTERTAINMENT</h4>
 
-        <div class="flex justify-center text-xs font-thin text-white space-x-4 sm:space-x-2 pb-6">
+        <div class="flex justify-center text-xs font-thin text-white space-x-4 sm:space-x-2 pb-6 max-sm:flex-wrap">
             <a href="https://www.sonymusic.com/terms-and-conditions/" target="_blank">
                 <h4>TERMS AND CONDITIONS</h4>
             </a>

@@ -1,10 +1,10 @@
 <template>
   <div id="aboutadele" class="flex flex-row bg-black h-screen">
-    <div class="flex items-end ml-24">
+    <div class="flex items-end ml-24 max-lg:hidden">
       <img class="" src="../assets/adeleabout.png"/>
       <!--¿ podemos poner un carrousel??-->
     </div>
-    <div id="info-bio" class="text-white w-5/6 mr-24">
+    <div id="info-bio" class="text-white w-5/6 mr-24 md:br-40 max-md:ml-16 max-md:mr-16 max-lg:ml-40">
       <h1 class="text-4xl font-serif mt-9 mb-16">ABOUT</h1>
       <div class="justify-self-end text-base font-thin overflow-y-scroll h-96 w-5/6 bg-neutral-900 rounded">
         <p class="ml-3 mt-3 ml-2">
@@ -124,7 +124,7 @@
         </p>
       </div>
       <div>
-          <p class="italic text-center font-serif mt-24 mr-24 sm:text-sm md:text-lg lg:text-3xl">
+          <p class="italic text-center font-serif mt-24 mr-24 max-sm:text-sm max-md:text-xl max-lg:text-2xl">
             “ I don’t make music for eyes. <br />
               I make music for ears ”
           </p>
