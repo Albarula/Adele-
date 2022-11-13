@@ -1,23 +1,32 @@
 <template>
-  <div v-if="!playVisibity" class="flex justify-center m-8 gap-4">
+  <div
+    v-if="!playVisibity"
+    class="flex justify-center m-0 md:m-8 gap-2 md:gap-4"
+  >
     <div
       id="song"
       v-for="(song, songIndex) in list"
       v-bind:key="song.id"
       v-on:click="playSong(songIndex)"
-      class="justify-between mb-4 cursor-pointer"
+      class="mb-4 cursor-pointer"
     >
-      <div>
-        <img
-          id="songImage"
-          class="object-cover h-48 rounded-lg"
-          v-bind:src="song.src"
-        />
+      <div class="m- md:m-2 lg:m-2">
+        <div>
+          <img
+            id="songImage"
+            class="object-contain h-18 max-h-screen md:h-48 m-2 lg:m-4 lg:h-52 rounded"
+            v-bind:src="song.src"
+          />
+        </div>
         <div class="text-white">
-          <h3 class="text-xl font-serif">{{ song.name }}</h3>
-          <p>
-            <b>{{ song.albumName }} </b> -({{ song.year }})
-          </p>
+          <h3 class="text-base sm:text-xl lg:text-xl font-serif">
+            {{ song.name }}
+          </h3>
+          <div class="hidden md:flex flex-row items-center">
+            <p>
+              <b>{{ song.albumName }} </b> -({{ song.year }})
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -52,7 +61,7 @@ export default {
         },
         {
           id: 2,
-          name: "Easy On Me",
+          name: "Easy on me",
           artistName: "Adele",
           albumName: "30",
           year: 2021,
@@ -61,7 +70,7 @@ export default {
         },
         {
           id: 3,
-          name: "Someone Like you",
+          name: "Someone like you",
           artistName: "Adele",
           albumName: "21",
           year: 2011,
@@ -79,7 +88,7 @@ export default {
         },
         {
           id: 5,
-          name: "Set Fire To The Rain",
+          name: "Set fire to the rain",
           artistName: "Adele",
           albumName: "21",
           year: 2011,
