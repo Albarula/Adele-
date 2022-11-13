@@ -1,53 +1,64 @@
 <template>
-    <div id="concertscomp" class="grid grid-cols-3">
+    <div id="concertscomp" class="grid sm:grid-cols-3">
         <!-- Photo -->
-        <div class="col-span-1">
-            <img class="w-full" src="../assets/adeleconc.png" alt="">
+        <div class="row-span-1 sm:grid-cols-3 sm:col-span-1 bg-stone-900  ">
+            <img class="w-full md:col-span-3" src="../assets/adeleconc.png" alt="">
         </div>
         <!-- Conciertos -->
-        <div class="col-span-2 text-center bg-white">
-            <h1 class="text-4xl font-serif uppercase py-10">Conciertos</h1>
+        <div class="row-span-1 sm:grid-cols-3 sm:col-span-2 text-center bg-white">                  
+            <h1 class="text-2xl md:text-3xl lg:text-4xl font-serif uppercase py-3 md:py-5 xl:py-10">Conciertos</h1>
             <button type="submit"
-                    class="h-10 w-1/4 border-2 border-gray-600 rounded-lg"
-                    v-on:click="getShows()">find
+                    class="h-10 w-1/4 text-gray-900 bg-white border border-gray-300
+                             focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-full text-sm px-5 py-2.5 mr-2 mb-2 2xl:my-10 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                    v-on:click="getShows(0)">buscar
             </button>
+
             <!-- Lista de Conciertos -->
-            <div v-if="eventos">
-                <h3 class="text-gray-800 text-lg ">encontramos <span class="text-yellow-600 font-semibold  ">{{ eventos.page.totalElements }} </span> eventos, <span>(in total {{ totalPages() }} pages )</span> </h3>
-                
-                <ul class="">
-                    <!-- <li v-for:="events in eventos._embedded.events" :key="events" -->
-                        <li v-for:="events in dataPerPage" :key="events"
-                         class="md:w-1/2 lg:w-1/3 ml-2 mr-2 md:ml-auto md:mr-auto text-left shadow-sm md:shadow-md my-2 hover:bg-slate-200"
+            <div v-if="eventos"
+                 class="w-10/12 sm:w-11/12 md:w-9/12 lg:w-2/3 xl:w-1/2 ml-auto mr-auto">
+                <!-- <h3 class="text-gray-800 text-lg ">encontramos <span class="text-yellow-600 font-semibold  ">{{ eventos.page.totalElements }}</span> eventos, <span>({{ totalPages() }} paginas x {{ elementsPerPage }} )</span>estamos a {{ currentPage+1 }}</h3>    -->
+                <ul>                                          
+                    <li v-for:="events in eventos._embedded.events" :key="events"        
+                         class="text-left shadow-sm md:shadow-md my-2 hover:bg-slate-200"
                          @click="showAttraction">
-                        {{events.name}} <br>
+                        <h3 class=""> {{events.name}} <br></h3>
                         {{events.dates.start.localDate}} <br>
                         {{events._embedded.venues[0].name}} in 
                         {{events._embedded.venues[0].city.name}},
                         {{events._embedded.venues[0].country.countryCode}}
                     </li>
                 </ul>
-                <nav class="panel-footer bg-purple-300 w-96 h-10 ml-auto mr-auto">
-                    <ul class="m-8 items-center flex justify-between">
-                        <li id="prev" class="previous"><a href="#">&larr;</a></li>
-                        <li v-for:="page in totalPages()" v-on:click="getDataPage(page)" class="pageItem"><a href="#">{{ page }}</a></li>
-                        <li id="next" class="next"><a href="#">&rarr;</a></li>
+
+                <nav class="bg-slate-200 h-8 sm:h-10 lg:h-12 ml-auto mr-auto rounded-md">
+                    <ul class="h-8 sm:h-10 lg:h-12 m-2 flex flex-row items-center justify-between">
+                        <li v-on:click.prevent="prevClick()">
+                            <a class="py-1 sm:py-2 px-3 ml-0 bg-white hover:bg-slate-300 border rounded-l-md border-gray-300" href="#">
+                                <i class="w-3 h-3 sm:w-4 sm:h-4 lg:w-5 lg:h-5 fa-sharp fa-solid fa-arrow-left text-sm lg:text-lg text-slate-500"></i>
+                                <!-- &larr; -->
+                            </a>
+                        </li>                        
+                        <li v-on:click.prevent="nextClick()">
+                            <a class="py-1 sm:py-2 px-3 mr-0 bg-white hover:bg-slate-300 border rounded-r-md border-gray-300" href="#">
+                                <i class="w-3 h-3 lg:w-5 lg:h-5 fa-sharp fa-solid fa-arrow-right text-sm lg:text-lg text-slate-500"></i>
+                                <!-- &rarr; -->
+                            </a>
+                        </li>
                     </ul>
                 </nav>
 
-                <div v-if="showAttractionModal">
-                    <AttractionModal :header-name = "eventos._embedded.events[0].name" 
-                                 :imageUrl = "eventos._embedded.events[0].images[0].url"
-                                 @close="showAttraction" />
-                </div>
             </div>
-        </div>        
+        </div>      
     </div>
+
+    <div v-if="showAttractionModal">
+        <AttractionModal :header-name = "eventos._embedded.events[0].name" 
+                         :imageUrl = "eventos._embedded.events[0].images[0].url"
+                         @close="showAttraction" />
+    </div>  
     
 </template>
 
 <script>
-//import { response } from 'express';
 import AttractionModal from './AttractionModalView.vue'
 export default {
     name: "ConciertosView",
@@ -59,42 +70,41 @@ export default {
             key: 'o5gbvSYDrZAEYhCXE11sLyK8G0t5e4Qs',
             showAttractionModal: false,
             elementsPerPage: 6,
-            dataPerPage: []
+            currentPage:0
         }
     },
-    // mounted(){
-    //     //this.getShows();
-    //     this.getDataPage(1);
-    // },
     methods: {
-        getShows() {
-            let url = `https://app.ticketmaster.com/discovery/v2/events.json?attractionId=K8vZ917Gku7&size=200&sort=date,asc&apikey=${this.key}`;
+        getShows(numPage) {
+            this.currentPage = numPage;
+          
+            let url = `https://app.ticketmaster.com/discovery/v2/events.json?attractionId=K8vZ917Gku7&sort=date,asc&apikey=${this.key}&size=${this.elementsPerPage}&page=${this.currentPage}`;
             fetch(url)
                 .then(response => response.json())
-                .then(datos => this.eventos = datos)
+                .then(datos => this.eventos = datos)                
                 //.then(datos => console.log(datos))
                 .catch((e) => (this.error =e));
-            console.log(this.getDataPage(1));
+        },
+        nextClick() {
+            this.currentPage++;
+            if (this.currentPage > (this.totalPages()-1)){
+                this.currentPage = 0
+            } 
+            this.getShows(this.currentPage)
+        },
+        prevClick() {
+            this.currentPage--;
+            if (this.currentPage < 0) {
+                this.currentPage = this.totalPages()-1
+            } 
+            this.getShows(this.currentPage)
         },
         showAttraction() {
             this.showAttractionModal = !this.showAttractionModal
         },
         totalPages() {
             return Math.ceil(this.eventos.page.totalElements / this.elementsPerPage)
-        },
-        getDataPage(numPage) {
-            this.dataPerPage = [];
-            let ini = (numPage*this.elementsPerPage) - this.elementsPerPage;
-            //let fin = 0;
-            let fin = numPage*this.elementsPerPage;
-            let tail = this.eventos.page.totalElements % this.elementsPerPage;
-            if ((tail != 0) && (numPage === this.totalPages()))
-             {
-                fin = fin-this.elementsPerPage + tail
-             }
-           
-             this.dataPerPage = this.eventos._embedded.events.slice(ini,fin);
         }
+        
     }
 }
 

@@ -1,7 +1,6 @@
 <template>
-    <div id="adelefooter" class="bg-[url('../assets/adelefooter.png')] sm:h-96 md:h-max lg:h-max bg-cover bg-no-repeat" src="../assets/adelefooter.png">
-      <div class="md:col-span-4 pt-80 pb-16 ml-24 md:mb-0">
-        
+    <div id="adelefooter" class="bg-[url('../assets/adelefooter.png')] lg:h-max bg-cover bg-no-repeat" src="../assets/adelefooter.png">
+      <div class="md:col-span-4 pt-80 pb-16 ml-24 md:mb-0 ">
         <p v-show="show" class="text-black font-serif font-semibold text-3xl pb-3"> ¡Felicidades {{nombre}}!</p>
         <p v-show="show" class="text-black font-serif text-xl"> Lo último de Adele te espera en tu correo :D</p>
         <p v-show="sentence" class="text-black font-serif text-2xl">¡Sé el primero en enterarte de todas las novedades!</p>

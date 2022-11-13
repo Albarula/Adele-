@@ -25,6 +25,7 @@
               <button><img class="h-3" src="./icons/previous.png" /></button>
             </div>
 
+
             <div class="md:flex flex-row p-2 md:p-5 lg:p-">
               <button v-on:click.prevent="playsong()" class="max-w-md">
                 <audio
